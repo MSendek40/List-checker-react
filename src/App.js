@@ -46,7 +46,7 @@ const addNewTask = (content) => {
     {
       content,
       done: false,
-      id: [tasks.length - 1].id + 1,
+      id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
     }
   ])
 }
@@ -63,14 +63,14 @@ const addNewTask = (content) => {
       <Section
         title="Lista zadań"
         body=
-        {<div> 
+        { 
           <Tasks 
           tasks={tasks} 
           hideDone={hideDone} 
           removeTask={removeTask}
           toggleTaskDone={toggleTaskDone}
           />
-        </div>}
+        }
         extraHeaderContent={
           <Buttons
            tasks={tasks} 

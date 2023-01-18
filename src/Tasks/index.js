@@ -7,11 +7,12 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
         {tasks.map(task => (
             <li
                 key={task.id}
-                className={`tasks__item${task.done && hideDone ? " tasks__item--hidden " : " "
+                className={`tasks__item${  hideDone && task.done ? " tasks__item--hidden " : " "
                     }`} >
                 <button 
-                className="tasks__button tasks__button--toggleDone"
                 onClick={()=> toggleTaskDone(task.id)}
+                className="tasks__button tasks__button--toggleDone"
+                
                 >
                     {task.done ? "✓" : ""}
                     
@@ -22,8 +23,9 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
                 </span>
 
                 <button 
+                 onClick={()=> removeTask(task.id)}
                 className="tasks__button tasks__button--remove"
-                onClick={()=> removeTask(task.id)}
+               
                 >
                     🗑
                 </button>

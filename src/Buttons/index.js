@@ -17,7 +17,8 @@ const Buttons = ({tasks, hideDone, toggleHideDone, setAllDone}) => (
                     
                 >
                     Ukończ wszystkie
-                </button></>
+                </button>
+                </>
         )}
     </div>
 )
