@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -13,9 +13,16 @@ const tasks = [
   { id: 4, content: "napisac list", done: true },
 ]
 
-const hideDone = false;
+
 
 function App() {
+  const [hideDone, setHideDone] = useState(false);
+
+const toggleHideDone = () => {
+  setHideDone (hideDone => !hideDone);
+};
+
+
   return (
     <Container>
       <Header />
@@ -30,7 +37,12 @@ function App() {
         body={<div> <Tasks tasks={tasks} hideDone={hideDone} />
         </div>}
         extraHeaderContent={
-          <Buttons tasks={tasks} hideDone={hideDone} />}
+          <Buttons
+           tasks={tasks} 
+           hideDone={hideDone} 
+           toggleHideDone={toggleHideDone} 
+           />
+          }
       />
 
     </Container>
