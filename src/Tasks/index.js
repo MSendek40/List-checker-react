@@ -1,11 +1,12 @@
 import React from "react";
 import "./style.css";
-
+import {TasksListStyle} from "./styled"
+import {TasksListItem} from "./styled"
 
 const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
-    <ul className="tasks__elements">
+    <TasksListStyle>
         {tasks.map(task => (
-            <li
+            <TasksListItem
                 key={task.id}
                 className={`tasks__item${  hideDone && task.done ? " tasks__item--hidden " : " "
                     }`} >
@@ -29,9 +30,9 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
                 >
                     🗑
                 </button>
-            </li>
+            </TasksListItem>
         ))}
-    </ul>
+    </TasksListStyle>
 );
 
 
