@@ -1,20 +1,16 @@
-.buttons__button {
+.buttons__button{
     background-color: white;
     color: teal;
     font-weight: 400;
     padding: 10px;
     border: none;
     transition: 1.5s;
-  }
-  
-  .buttons__button:hover {
-    color: rgb(184, 224, 224);
-    transform: scale(1.02) 
-  }
-  
-  .tasks__buttons {
+
+}
+.tasks__buttons{
+
     display: flex;
     justify-content: flex-end;
     align-items: center;
     background-color: white;  
-  }
+}
