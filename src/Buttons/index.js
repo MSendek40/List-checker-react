@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import { ButtonsButton } from "./styled";
 
 const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
     tasks.length > 0 && (
