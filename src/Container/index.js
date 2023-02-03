@@ -1,9 +1,9 @@
 import React from "react";
-import "./style.css";
+import { Containerstyle } from "./styled";
 
 
 const Container = (props) => (
-    <main className="container"> {props.children} </main>
+    <Containerstyle> {props.children} </Containerstyle>
 );
 
 export default Container
