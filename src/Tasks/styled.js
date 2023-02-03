@@ -27,4 +27,43 @@ export const TasksListStyle = styled.ul `
       grid-template-rows: 1fr;
       word-break: break-word;
       
-    }`
+    }`;
+
+    export const ContentDone = styled.span`
+${({ done}) => done && css`
+text-decoration: line-through;
+`}
+`;
+
+
+export const Button = styled.button`
+ color: green;
+    border-style: none;
+    height: 30px;
+    width: 30px;
+${({toggleDone})=> toggleDone && css`
+color: white;
+    background: green;
+    transition: 1s;
+
+    &:hover:{
+        background: rgb(37, 167, 37);
+    cursor: pointer;
+    }
+` }
+
+${({remove})=> remove && css`
+background-color: firebrick;
+    color: white;
+    height: 30px;
+    width: 30px;
+    transition: 1s;
+
+    &:hover{
+        background-color: rgb(222, 69, 69);
+    cursor: pointer;
+
+    }
+`}
+
+`;
