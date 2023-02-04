@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { css } from "styled-components";
 
 
-export const TasksListStyle = styled.ul `
+export const TasksListStyle = styled.ul`
  box-shadow: 8px 8px 24px 0px rgb(208, 208, 214);
     padding: 10px;
     background-color: white;
@@ -11,7 +11,7 @@ export const TasksListStyle = styled.ul `
     list-style-type: none;
     `;
 
-    export const TasksListItem = styled.li `
+export const TasksListItem = styled.li`
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-gap: 100px;
@@ -19,7 +19,7 @@ export const TasksListStyle = styled.ul `
     padding: 10px;
     border-bottom: solid 1px hsl(0, 3%, 83%);
     word-break: break-word;
-    ${({hidden}) => hidden && css`
+    ${({ hidden }) => hidden && css`
     display: none;`}
 
 
@@ -29,41 +29,38 @@ export const TasksListStyle = styled.ul `
       
     }`;
 
-    export const ContentDone = styled.span`
-${({ done}) => done && css`
-text-decoration: line-through;
-`}
-`;
-
+export const ContentDone = styled.span`
+    ${({ done }) => done && css`
+   text-decoration: line-through;
+`}`;
 
 export const Button = styled.button`
- color: green;
     border-style: none;
     height: 30px;
     width: 30px;
-${({toggleDone})=> toggleDone && css`
-color: white;
+
+${({ toggleDone }) => toggleDone && css`
     background: green;
-    transition: 1s;
-
-    &:hover:{
-        background: rgb(37, 167, 37);
-    cursor: pointer;
-    }
-` }
-
-${({remove})=> remove && css`
-background-color: firebrick;
     color: white;
     height: 30px;
     width: 30px;
     transition: 1s;
 
     &:hover{
-        background-color: rgb(222, 69, 69);
+        background: rgb(37, 167, 37);
     cursor: pointer;
-
     }
 `}
 
-`;
+${({ remove }) => remove && css`
+    background-color: firebrick;
+    color: white;
+    height: 30px;
+    width: 30px;
+    transition: 1s;
+
+    &:hover{
+        background: rgb(222, 69, 69);
+    cursor: pointer;
+    }
+`}`;

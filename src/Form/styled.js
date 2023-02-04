@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 export const FormElements = styled.form`
 
-box-shadow: 8px 8px 24px 0px rgb(208, 208, 214);
-display: grid;
+    box-shadow: 8px 8px 24px 0px rgb(208, 208, 214);
+    display: grid;
     grid-template-columns: 1fr auto;
     grid-gap: 10px;
     background-color: white;
@@ -22,7 +22,7 @@ export const InputStyle = styled.input`
 `;
 
 export const ButtonForm = styled.button`
- background-color: teal;
+    background-color: teal;
     color: white;
     border: none;
     padding: 10px;
