@@ -31,6 +31,7 @@ export const ButtonForm = styled.button`
   &:hover{
     background-color: rgb(6, 146, 146);
     transform: scale(1.05);
+    cursor: pointer;
     @media (max-width: 767px) {
     grid-template-columns: 1fr;
     }
