@@ -47,7 +47,7 @@ ${({ toggleDone }) => toggleDone && css`
     transition: 1s;
 
     &:hover{
-        background: rgb(37, 167, 37);
+    background: rgb(37, 167, 37);
     cursor: pointer;
     }
 `}
