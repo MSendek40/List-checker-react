@@ -4,10 +4,11 @@ import { ButtonForm, FormElements, InputStyle } from "./styled";
 
 const Form = ({ addNewTask }) => {
 
-    const inputRef = useRef(null)
+    const inputRef = useRef(null);
 
-const focusInput = () => {inputRef.current.focus();
-}
+    const focusInput = () => {
+        inputRef.current.focus();
+    }
 
     const [newTaskContent, setNewTaskContent] = useState("");
 
@@ -23,14 +24,14 @@ const focusInput = () => {inputRef.current.focus();
 
     return (
         <FormElements onSubmit={onFormSubmit}>
-            <InputStyle 
-            ref = {inputRef}
+            <InputStyle
+                ref={inputRef}
                 value={newTaskContent}
                 placeholder="Co jest do zrobienia?"
                 onChange={({ target }) => setNewTaskContent(target.value)}
             />
             <ButtonForm
-            onClick={focusInput}
+                onClick={focusInput}
             > Dodaj zadanie</ButtonForm>
         </FormElements>
     )
