@@ -28,7 +28,7 @@ const TaskList= ({ removeTask}) => {
     
                     <Button
                         remove
-                        onClick={() => removeTask(task.id)}
+                        onClick={() => dispatch(removeTask(task.id))}
                     >
                         🗑
                     </Button>
