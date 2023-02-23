@@ -2,7 +2,7 @@
  
 ## Preview
 
-![Demonstration](C:\Dev\todo-list-react\public/taskChecker.gif)!
+![Demonstration](C:/Dev/todo-list-react/public/taskChecker.gif)!
 
 ## Description
 I created TaskList Checker. This is  very simple aplication for adding new tasks and preparing list below. 
