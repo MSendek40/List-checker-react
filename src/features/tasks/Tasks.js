@@ -13,17 +13,17 @@ function Tasks() {
       <Header />
       <Section
         title="Dodaj nowe zadanie"
-        body={<Form/>
-      }
+        body={<Form />
+        }
       />
       <Section
         title="Lista zadań"
         body=
         {
-          <TaskList/>
+          <TaskList />
         }
         extraHeaderContent={
-          <Buttons/>
+          <Buttons />
         }
       />
     </Container>
