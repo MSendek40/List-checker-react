@@ -11,12 +11,12 @@ const Buttons = () => {
     const hideDone = useSelector(selectHideDone)
 
     const dispatch = useDispatch();
-    return  ( 
+    return (
         !areTaskEmpty && (
             <TasksButtons>
                 <ButtonsButton
                     hidenDone
-                    onClick={()=> dispatch(toggleHideDone())}
+                    onClick={() => dispatch(toggleHideDone())}
                 >
                     {hideDone ? "Pokaż" : "Ukryj"} ukończone
                 </ButtonsButton>
@@ -29,7 +29,7 @@ const Buttons = () => {
                 </ButtonsButton>
             </TasksButtons>
         )
-        );
+    );
 }
 
 export default Buttons;

@@ -6,14 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import { GlobalStyle } from './GlobalStyle';
 import store from './store.js';
 
-
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode> 
+  <React.StrictMode>
     <Provider store={store}>
-    <GlobalStyle />  
-    <App />
+      <GlobalStyle />
+      <App />
     </Provider>
   </React.StrictMode>
 );

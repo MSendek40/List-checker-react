@@ -9,7 +9,6 @@ import { ButtonForm, FormElements, InputStyle } from "./styled";
 const Form = () => {
 
     const [newTaskContent, setNewTaskContent] = useState("");
-
     const inputRef = useRef(null);
 
     const dispatch = useDispatch();
@@ -22,10 +21,9 @@ const Form = () => {
 
         dispatch(addTask({
             content: newTaskContent.trim(),
-            done: false, 
+            done: false,
             id: nanoid(),
-
-        })); 
+        }));
 
         setNewTaskContent("")
         inputRef.current.focus();
