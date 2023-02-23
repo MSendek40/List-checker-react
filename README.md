@@ -1,8 +1,16 @@
 # TaskList-Checker
  
+## Preview
+
+![Demonstration](public/taskChecker.gif)!
+
 ## Description
 I created TaskList Checker. This is  very simple aplication for adding new tasks and preparing list below. 
 When you use it you have opportunity to mark your tasks as done and/or remove
+
+## Demo 
+
+ https://msendek40.github.io/list-checker-react/
 
 ## In my project I used: 
 - HTML
@@ -12,11 +20,10 @@ When you use it you have opportunity to mark your tasks as done and/or remove
 - styled components
 - Media queries
 - own Hook
+- React 
+- Redux
 
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with Create React App.
 
 ## Available Scripts
 
