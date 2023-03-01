@@ -16,11 +16,13 @@ export const ButtonsButton = styled.button`
     border: none;
     cursor: pointer;
     transition: 1.5s;
-    ${({ hidenDone }) => hidenDone && css`   
     &:hover{
         color: rgb(21, 168, 168);
         cursor: pointer;
-    }`}
+    }
+
+    ${({ hidenDone }) => hidenDone && css`   
+`}
 
     ${({allDone }) => allDone && css`
     &:hover{
