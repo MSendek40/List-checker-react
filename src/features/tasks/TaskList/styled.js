@@ -14,7 +14,7 @@ export const TasksListStyle = styled.ul`
 export const TasksListItem = styled.li`
     display: grid;
     grid-template-columns: auto 1fr auto;
-    grid-gap: 100px;
+    grid-gap: 20px;
     align-items: center;
     padding: 10px;
     border-bottom: solid 1px hsl(0, 3%, 83%);
