@@ -21,9 +21,10 @@ const Buttons = () => {
     return (
 
         <TasksButtons
-            onClick={() => { dispatch(fetchExampleTasks()) }}
         >
-            <ButtonsButton>
+            <ButtonsButton
+             onClick={() => { dispatch(fetchExampleTasks()) }}
+            >
                 Pobierz przykładowe zadania
             </ButtonsButton>
             {!areTaskEmpty && (
