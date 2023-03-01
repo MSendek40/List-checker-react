@@ -3,7 +3,14 @@ import { ButtonsButton } from "./styled";
 import { TasksButtons } from "./styled";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { toggleHideDone, setAllDone, selectAreTaskEmpty, selectHideDone, selectIsEveryTaskDone } from "../tasksSlice";
+import {
+    toggleHideDone,
+    setAllDone,
+    selectAreTaskEmpty,
+    selectHideDone,
+    selectIsEveryTaskDone,
+    fetchExampleTasks
+} from "../tasksSlice";
 
 const Buttons = () => {
     const areTaskEmpty = useSelector(selectAreTaskEmpty);
@@ -12,24 +19,28 @@ const Buttons = () => {
 
     const dispatch = useDispatch();
     return (
-        !areTaskEmpty && (
-            <TasksButtons>
-                <ButtonsButton
-                    hidenDone
-                    onClick={() => dispatch(toggleHideDone())}
-                >
-                    {hideDone ? "Pokaż" : "Ukryj"} ukończone
-                </ButtonsButton>
-                <ButtonsButton
-                    allDone
-                    onClick={() => dispatch(setAllDone())}
-                    disabled={isEveryTaskDone}
-                >
-                    Ukończ wszystkie
-                </ButtonsButton>
-            </TasksButtons>
-        )
-    );
-}
+
+        <TasksButtons
+            onClick={() => { dispatch(fetchExampleTasks()) }}
+        >
+            <ButtonsButton>
+                Pobierz przykładowe zadania
+            </ButtonsButton>
+            {!areTaskEmpty && (
+                <>
+                    <ButtonsButton
+                        onClick={() => dispatch(toggleHideDone())}>
+                        {hideDone ? "Pokaż " : "Ukryj "} ukończone
+                    </ButtonsButton>
+                    <ButtonsButton
+                        onClick={() => dispatch(setAllDone())}
+                        disabled={isEveryTaskDone}>
+                        Ukończ wszystkie
+                    </ButtonsButton>
+                </>
+            )}
+        </TasksButtons>
+    )
+};
 
 export default Buttons;

@@ -4,8 +4,6 @@ import { useDispatch } from "react-redux";
 import { addTask } from "../tasksSlice";
 import { ButtonForm, FormElements, InputStyle } from "./styled";
 
-
-
 const Form = () => {
 
     const [newTaskContent, setNewTaskContent] = useState("");
