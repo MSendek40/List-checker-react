@@ -1,9 +1,9 @@
-import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
+import { HashRouter, Link, Redirect, Route, Switch } from "react-router-dom";
 import Tasks from "./features/tasks/Tasks";
 import Author from "./features/author/Author";
 
 export default () => (
-    <BrowserRouter>
+    <HashRouter>
         <nav>
             <ul>
                 <li><Link to="/zadania">
@@ -23,7 +23,10 @@ export default () => (
                 <Route path="/author">
                     <Author />
                 </Route>
+                <Route path="/">
+                    <Redirect to='/zadania'/>
+                </Route>
             </Switch>
         </nav>
-    </BrowserRouter>
+    </HashRouter>
 )

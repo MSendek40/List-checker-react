@@ -2,16 +2,18 @@ import Container from "../../common/Container";
 import Header from "../../common/Header";
 import Section from "../../common/Section";
 
-export default () => (
+function Author() {
+    return (
+        <Container>
+            <Header title="O autorze" />
+            <Section title="Marek Aleksander Sendek"
+                body={
+                    <> czesc</>}
+            >
+            </Section>
+        </Container>
 
-<Container>
-<Header  title="O autorze"/>
-<Section title= "Marek Aleksander Sendek"
-         body= {
-            "Cześć, witam Cię na mojej stronie"}   
->
+    )
+};
 
-</Section>
-</Container>
-     
-);
+export default Author;
