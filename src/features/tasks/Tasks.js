@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from "../../features/tasks/Form";
+import Form from "../../features/tasks/TasksPage/Form";
 import TaskList from "../../features/tasks/TaskList";
 import Buttons from "../../features/tasks/Buttons";
 import Section from "../../common/Section";
