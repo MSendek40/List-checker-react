@@ -8,7 +8,7 @@ align-items: center;
 justify-content: center;
 background-color: white;
 color: black;
-margin-top: 5px;
+margin-top: 2px;
 padding: 10px;
 width: auto;
 `;
