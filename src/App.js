@@ -1,5 +1,5 @@
 import { HashRouter, Link, Redirect, Route, Switch } from "react-router-dom";
-import Tasks from "./features/tasks/Tasks";
+import Tasks from "./features/tasks/tasksPage";
 import Author from "./features/author/Author";
 
 export default () => (
